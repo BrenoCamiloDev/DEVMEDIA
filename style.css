@@ -18,16 +18,14 @@ h1, h2, h3, h4, h5, h6 {
 /*Estilizando Cabeçalho*/
 #Topo {
     position: fixed;
-    display: inline;
-    display: flex;
     background-color: white;
-    visibility: inherit;  
-    align-items: flex-start;
+    z-index: 1;
+    justify-content: flex-end;
 }
 #topo{
-    width:1024px;
-    display: inline-flex;
-    position: relative;
+    width:100%;
+    margin: 20px auto;
+    justify-content: flex-end;
 }
 
 .p1{
@@ -88,41 +86,45 @@ vertical-align: top;
 
  #ContainerOpcoes img{
     margin: auto;
-    width: 90%;
-
+    width: 100%;
+    object-fit: cover;
 
 }
 
  #Conteudo {
      text-align: center;
-     border: solid 1px ;
+     
  }
 
  #ContainerPrincipal {
     padding: 200px 0px; 
     border: solid 1px ;
     background-image: url(assets/img-fundo.jpg);
-    image:normal;
     width: 90%;
+    height: auto;
+    object-fit: cover;
     margin: auto;
+
  }
 
  #ContainerPrincipal div{
      line-height: 50px;
      text-align: center;
-     border: solid 1px;
      width: 500px;
      margin: auto;
-     color: white;
      height: 100px;
      background-color: rgb(101, 190, 101);
      opacity: 80%;
+     color: rgb(255, 255, 255);
+ }
+
+ #containerprincipal div {
+     z-index: 2;
  }
 
  #ContainerWelcome  {
      padding-top: 50px;
      line-height: 1.8em;
-     border: solid 1px;
      width: 530px;
      margin:auto;
      padding-bottom: 20px;
@@ -137,7 +139,6 @@ vertical-align: top;
  }
 
 #ContainerOpcoes    {
-    border: solid 1px green;
     display: inline-flex;
     padding-top: 20px;
 }
@@ -150,37 +151,56 @@ vertical-align: top;
 }
 
 #ROTA {
+    padding: 90px 90px 90px 90px;
     width: 80%;
     margin: auto;
     line-height: 1.8em;
     padding-bottom: 10px;
 }
-
+#SOBRE {
+    align-items: center;
+    padding: 100px 0px 100px 0px;
+}
 
 #SOBREFILTRO {
     display: flex;
     line-height: 1.8em;
-    border: 1px solid black;
     display: inline-flex;
-    flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 800px;
+    width: 100%;
+    margin: 50px auto;
 }
 
 #SOBREFILTRO img {
     width: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    
 }
 #CARD img{
     float: left;
     padding-left: 10%;
+    width: auto;
+    height: 100px;
+    align-items: center;
 }
 #CARD {
-    text-align: center;
+    width: calc(100%/2 - 20px);
+    margin: 10px;
+    box-shadow: 2px 2px 4px 0px white;
     display: flex;
+    flex-direction: column;
+    height: 300px;
+   object-fit: cover;
 
 }
 
 
 footer {
-    width: 90%;
+    width: 100%;
     margin: auto;
     flex-wrap: wrap;
     display: flex;
@@ -198,5 +218,7 @@ footer img {
     flex: row wrap ;
 }
 #Dono {
+
+    border-top: 1px solid black;
 text-align: center;
 }
